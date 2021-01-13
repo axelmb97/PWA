@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="name" content="To-Do-List">
+    <meta name="description" content="Esta progresive web app es una simple lista de tareas la cual permite llevar registro de tus actividades a hacer tanto en tu computadora como en tu dispositivo movíl.">
+    <meta name="author" content="Nombre del autor">
+    <meta name="keywords" content="List,to-do,Lista,PWA,simple">
+    <meta name="theme-color" content="#000">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>To Do List</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png">
+    <link rel="apple-touch-startup-image" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="./manifest.json">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="clear">
+                <i class="fas fa-sync-alt"></i>
+            </div>
+            <div id="date" class="date"></div>
+        </div>
+        <div class="content  container-box">
+            <ul id="list"></ul>
+        </div>
+        <div class="add-to-do">
+            <i class="fas fa-plus-circle"></i>
+            <input type="text" id="input" placeholder="Add a to-do">
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/747a22a42f.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+</body>

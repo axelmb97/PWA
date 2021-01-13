@@ -1,0 +1,272 @@
+html{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+*,
+*
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0,0,0,0.1);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+.container{
+width: 100%;
+height: 100vh;
+}
+.container-box{
+    max-width: 64rem;
+    height: auto;
+}
+.header,.content, .add-to-do{ padding:1rem; }
+
+/* HEADER */
+
+.header{
+position: relative;
+top: 0;
+left: 0;
+width: 100%;
+height: 30vh;
+/* background: #654; */
+background-image: url('../assets/img/landscape.jpg');
+background-size: cover;
+background-position: center;
+}
+
+.clear{
+width: 2rem;
+height: 2rem;
+position: absolute;
+top: 1.2rem;
+right: 1.2rem;
+}
+
+.clear > i{
+    font-size: 1.3rem;
+    color: #fff;
+    
+}
+
+.clear i:hover{
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: rotate(45deg);
+
+}
+
+.date{
+position: absolute;
+bottom: 2rem;
+left: 2rem;
+font-size: 1.3rem;
+color: #fff;
+}
+
+
+/* CONTENT */
+
+.content{
+    /* width: 80%;
+    height: auto; */
+    min-height: 30rem;
+    margin: 0 auto;
+    background-color: #FFF;
+    /* overflow: hidden; */
+}
+
+/* .content::-webkit-scrollbar {
+
+    display: none;
+
+} */
+
+.content ul{
+    padding:0;
+    margin:0;
+}
+
+.item{
+    width:100%;
+    height: auto;
+    min-height: 2rem;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item i.co{
+    font-size: 1rem;
+    padding-left: .3rem;
+}
+
+.item i.co:hover{
+    cursor: pointer;
+}
+
+.fa-check-circle{
+    color:#6eb200;
+}
+    
+.item p.text{
+    padding:0;
+    margin:0;
+    font-size: 1rem;
+    background-color: #FFF;
+}
+
+.lineThrough{
+    text-decoration: line-through;
+    color : #ccc;
+}
+
+.item i.de{
+    font-size: 1rem;
+}
+
+.item i.de:hover{
+    color:#af0000;
+    cursor: pointer;
+}
+
+/* ADD TO DO */
+
+.add-to-do{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    /* margin: 0 auto; */
+    background-color: #fff;
+    /* padding: .8rem; */
+    border-top: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.add-to-do i{
+    font-size: 1.3rem;
+    color: #4162f6;
+}
+
+.add-to-do input{
+    width: 80%;
+    /* height: 2rem; */
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    padding-left: .5rem;
+    margin-left: .5rem;
+}
+
+.add-to-do input::-webkit-input-placeholder { 
+    /*Chrome/Opera/Safari*/
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.add-to-do input::-moz-placeholder { /* Firefox 19+ */
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
+    
+}
+
+.add-to-do input:-ms-input-placeholder { /*IE 10+*/
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
+    ;
+}
+
+.add-to-do input:-moz-placeholder { /*Firefox 18-*/
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 20rem){
+    .clear > i{ font-size: 1.5rem;}
+    .date{ font-size: 1.5rem; }
+    .item{
+        height: auto;
+        min-height: 2.2rem;
+    }
+    .item i.co{ font-size: 1.2rem; }
+    .item p.text{ font-size: 1.2rem; }
+    .item i.de{ font-size: 1.2rem; }
+
+}
+@media screen and (min-width: 30rem){
+    /* .add-to-do{background: #000;} */
+    .add-to-do i{
+        font-size: 1.5rem;
+        color: #4162f6;
+    }
+    .add-to-do input{ font-size: 1.2rem; }
+    .add-to-do input::-moz-placeholder { /* Firefox 19+ */
+        font-size: 1.3rem;
+    }
+    
+    .add-to-do input:-ms-input-placeholder { /*IE 10+*/
+        font-size: 1.3rem;
+    }
+    
+    .add-to-do input:-moz-placeholder { /*Firefox 18-*/
+        font-size: 1.3rem;
+    }
+}
+@media screen and (min-width: 48rem){
+    .header{ height: 35vh; }
+}
+@media screen and (min-width: 64rem){
+    .header{
+        height: 40vh;
+        background-size: cover;
+        background-position: 60% 60%;
+    }
+        
+    .clear > i{ font-size: 1.8rem;}
+    .date{ font-size: 1.8rem; }
+    .item{
+        height: auto;
+        min-height: 2.5rem;
+    }
+    .item i.co{ font-size: 1.5rem; }
+    .item p.text{ font-size: 1.3rem; }
+    .item i.de{ font-size: 1.5rem; }
+    .add-to-do i{
+        font-size: 1.8rem;
+        color: #4162f6;
+    }
+    .add-to-do input{ 
+        font-size: 1.3rem; 
+        padding: .3rem;
+    }
+    .add-to-do input::-moz-placeholder { /* Firefox 19+ */
+        font-size: 1.5rem;
+    }
+    .add-to-do input:-ms-input-placeholder { /*IE 10+*/
+        font-size: 1.5rem;
+    }
+    .add-to-do input:-moz-placeholder { /*Firefox 18-*/
+        font-size: 1.5rem;
+    }
+}
